@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Presentation.API", "Enigma.Presentation.API\Enigma.Presentation.API.csproj", "{438B09BB-F3AA-4AFF-A56E-85ECF48BEAFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Presentation.API", "Presentation\Enigma.Presentation.API\Enigma.Presentation.API.csproj", "{438B09BB-F3AA-4AFF-A56E-85ECF48BEAFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E5D87088-B404-44D3-A125-7614FD07F9A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{95B3064E-E39A-48B4-A473-A6887417214A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Infrastructure.Common", "Infrastructure\Enigma.Infrastructure.Common\Enigma.Infrastructure.Common.csproj", "{97562A09-CB05-4509-A6A9-8D4D745FFDF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Infrastructure.Configuration", "Infrastructure\Enigma.Infrastructure.Configuration\Enigma.Infrastructure.Configuration.csproj", "{8F56C2B4-C16F-4402-8963-A8E7190A0369}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles", "{60CF89D6-6910-40C3-BE1F-398D68931863}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\SharedFiles\appstart.settings.json = Infrastructure\SharedFiles\appstart.settings.json
+		Infrastructure\SharedFiles\args.settings.json = Infrastructure\SharedFiles\args.settings.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,23 @@ Global
 		{438B09BB-F3AA-4AFF-A56E-85ECF48BEAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438B09BB-F3AA-4AFF-A56E-85ECF48BEAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438B09BB-F3AA-4AFF-A56E-85ECF48BEAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97562A09-CB05-4509-A6A9-8D4D745FFDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97562A09-CB05-4509-A6A9-8D4D745FFDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97562A09-CB05-4509-A6A9-8D4D745FFDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97562A09-CB05-4509-A6A9-8D4D745FFDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{438B09BB-F3AA-4AFF-A56E-85ECF48BEAFA} = {E5D87088-B404-44D3-A125-7614FD07F9A9}
+		{97562A09-CB05-4509-A6A9-8D4D745FFDF7} = {95B3064E-E39A-48B4-A473-A6887417214A}
+		{8F56C2B4-C16F-4402-8963-A8E7190A0369} = {95B3064E-E39A-48B4-A473-A6887417214A}
+		{60CF89D6-6910-40C3-BE1F-398D68931863} = {95B3064E-E39A-48B4-A473-A6887417214A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67205F16-3DFE-42C3-9BD7-71F390D5BB28}
