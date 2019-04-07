@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\SharedFiles\appstart.settings.json" Link="appstart.settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SharedFiles\args.settings.json" Link="args.settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Enigma.Infrastructure.Common\Enigma.Infrastructure.Common.csproj" />
   </ItemGroup>
 
