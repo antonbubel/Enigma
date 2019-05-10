@@ -17,7 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles"
 	ProjectSection(SolutionItems) = preProject
 		Infrastructure\SharedFiles\appstart.settings.json = Infrastructure\SharedFiles\appstart.settings.json
 		Infrastructure\SharedFiles\args.settings.json = Infrastructure\SharedFiles\args.settings.json
+		Infrastructure\SharedFiles\enigma-machine-configuration.settings.json = Infrastructure\SharedFiles\enigma-machine-configuration.settings.json
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Machine", "Machine", "{91248E80-3CA6-4026-AF3B-797DF144CB03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Machine", "Machine\Enigma.Machine\Enigma.Machine.csproj", "{64AE1364-3328-43DB-AC55-8E407AA04B0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Machine.Facade", "Machine\Enigma.Machine.Facade\Enigma.Machine.Facade.csproj", "{BE573E89-5A89-431D-AE96-7120841FA070}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Machine.Integration", "Machine\Enigma.Machine.Models\Enigma.Machine.Integration.csproj", "{0EE45376-F97E-4C2B-87E3-93E1D2097549}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +46,18 @@ Global
 		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F56C2B4-C16F-4402-8963-A8E7190A0369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AE1364-3328-43DB-AC55-8E407AA04B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AE1364-3328-43DB-AC55-8E407AA04B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AE1364-3328-43DB-AC55-8E407AA04B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AE1364-3328-43DB-AC55-8E407AA04B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE573E89-5A89-431D-AE96-7120841FA070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE573E89-5A89-431D-AE96-7120841FA070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE573E89-5A89-431D-AE96-7120841FA070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE573E89-5A89-431D-AE96-7120841FA070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE45376-F97E-4C2B-87E3-93E1D2097549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE45376-F97E-4C2B-87E3-93E1D2097549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE45376-F97E-4C2B-87E3-93E1D2097549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE45376-F97E-4C2B-87E3-93E1D2097549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +67,9 @@ Global
 		{97562A09-CB05-4509-A6A9-8D4D745FFDF7} = {95B3064E-E39A-48B4-A473-A6887417214A}
 		{8F56C2B4-C16F-4402-8963-A8E7190A0369} = {95B3064E-E39A-48B4-A473-A6887417214A}
 		{60CF89D6-6910-40C3-BE1F-398D68931863} = {95B3064E-E39A-48B4-A473-A6887417214A}
+		{64AE1364-3328-43DB-AC55-8E407AA04B0A} = {91248E80-3CA6-4026-AF3B-797DF144CB03}
+		{BE573E89-5A89-431D-AE96-7120841FA070} = {91248E80-3CA6-4026-AF3B-797DF144CB03}
+		{0EE45376-F97E-4C2B-87E3-93E1D2097549} = {91248E80-3CA6-4026-AF3B-797DF144CB03}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67205F16-3DFE-42C3-9BD7-71F390D5BB28}

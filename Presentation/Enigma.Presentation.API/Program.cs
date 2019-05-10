@@ -66,7 +66,6 @@
         private static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
-                .UseKestrel(ConfigureKestrel)
                 .UseStartup<Startup>()
                 .ConfigureLogging(ConfigureLogging)
                 .UseNLog();

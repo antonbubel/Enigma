@@ -1,0 +1,63 @@
+{
+  "alphabet-length": 26,
+  "plugboard-mappings": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "rotors": [
+    {
+      "name": "I",
+      "mappings": "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
+      "notches": [ "Q" ]
+    },
+    {
+      "name": "II",
+      "mappings": "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
+      "notches": [ "E" ]
+    },
+    {
+      "name": "III",
+      "mappings": "BDFHJLCPRTXVZNYEIWGAKMUSQO",
+      "notches": [ "V" ]
+    },
+    {
+      "name": "IV",
+      "mappings": "ESOVPZJAYQUIRHXLNFTGKDCMWB",
+      "notches": [ "J" ]
+    },
+    {
+      "name": "V",
+      "mappings": "VZBRGITYUPSDNHLXAWMJQOFECK",
+      "notches": [ "Z" ]
+    },
+    {
+      "name": "VI",
+      "mappings": "JPGVOUMFYQBENHZRDKASXLICTW",
+      "notches": [ "M", "Z" ]
+    },
+    {
+      "name": "VII",
+      "mappings": "NZJHGRCXMYSWBOUFAIVLPEKQDT",
+      "notches": [ "M", "Z" ]
+    },
+    {
+      "name": "VIII",
+      "mappings": "FKQHTLXOCBJSPDZRAMEWNIUYGV",
+      "notches": [ "M", "Z" ]
+    }
+  ],
+  "reflectors": [
+    {
+      "name": "Reflector A",
+      "mappings": "EJMZALYXVBWFCRQUONTSPIKHGD",
+      "notches": []
+    },
+    {
+      "name": "Reflector B",
+      "mappings": "YRUHQSLDPXNGOKMIEBFZCWVJAT",
+      "notches": []
+    },
+    {
+      "name": "Reflector C",
+      "mappings": "FVPJIAOYEDRZXWGCTKUQSBNMHL",
+      "notches": []
+    }
+  ]
+}

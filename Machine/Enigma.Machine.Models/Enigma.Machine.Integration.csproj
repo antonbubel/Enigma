@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\Infrastructure\SharedFiles\enigma-machine-configuration.settings.json" Link="enigma-machine-configuration.settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Enigma.Infrastructure.Common\Enigma.Infrastructure.Common.csproj" />
+  </ItemGroup>
+
+</Project>
