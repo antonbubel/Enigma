@@ -1,22 +1,36 @@
 ﻿namespace Enigma.Presentation.API
 {
+    using System;
+    using System.Text;
+
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.SignalR;
     using Microsoft.AspNetCore.Cors.Infrastructure;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.IdentityModel.Tokens;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
-
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+    
+    
     using Hubs;
+    using Adapters;
 
     using Machine;
-
     using Infrastructure.Configuration;
 
+    using BusinessLogic.Ports;
+    using BusinessLogic.Models;
+    using BusinessLogic.Identity;
+    using static BusinessLogic.Identity.Helpers.Constants;
+
     using Domain.Model;
-    
+    using Domain.Model.Entities;
 
     public class Startup
     {
@@ -29,7 +43,13 @@
                .BuildServiceProvider();
 
             services.AddScoped<IEnigmaMachine, EnigmaMachine>();
-            
+
+            services.AddSingleton(ctx => MapperConfigurationProvider.CreateConfiguration().CreateMapper());
+            services.AddSingleton<IJwtFactory, JwtFactory>();
+
+            services.TryAddTransient<IHttpContextAccessor, HttpContextAccessor>();
+   
+            ConfigureAuthentication(services);
             services.AddCors();
             services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -47,6 +67,7 @@
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
             app.UseCors(ConfigureCorsPolicy);
             app.UseSignalR(ConfigureHubRouteBuilder);
             app.UseMvc();
@@ -71,6 +92,70 @@
         private void ConfigureHubRouteBuilder(HubRouteBuilder hubRouteBuilder)
         {
             hubRouteBuilder.MapHub<SignalRHub>("/enigma-signalr-hub");
+        }
+
+        private void ConfigureAuthentication(IServiceCollection services)
+        {
+            var secretKey = ConfigurationManager.Identity.SecretKey;
+            var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
+
+            // jwt wire up
+            var jwtIssuer = ConfigurationManager.Identity.JwtIssuer;
+            var jwtIssuerAudience = ConfigurationManager.Identity.JwtIssuerAudience;
+
+            // Configure JwtIssuerOptions
+            services.Configure<JwtIssuerOptions>(options => {
+                options.Issuer = jwtIssuer;
+                options.Audience = jwtIssuerAudience;
+                options.SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
+            });
+
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = jwtIssuer,
+
+                ValidateAudience = true,
+                ValidAudience = jwtIssuerAudience,
+
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = signingKey,
+
+                RequireExpirationTime = false,
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.Zero
+            };
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(configureOptions =>
+            {
+                configureOptions.ClaimsIssuer = jwtIssuer;
+                configureOptions.TokenValidationParameters = tokenValidationParameters;
+                configureOptions.SaveToken = true;
+            });
+
+            // api user claim policy
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ApiUser", policy => policy.RequireClaim(JwtClaimIdentifiers.Rol, JwtClaims.ApiAccess));
+                options.AddPolicy("Administrator", policy => policy.RequireClaim(JwtClaimIdentifiers.Rol, JwtClaims.Administrator));
+            });
+
+            var builder = services.AddIdentityCore<ApplicationUser>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = ConfigurationManager.Identity.PasswordRequiredLength;
+            });
+
+            builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), builder.Services);
+            builder.AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
         }
     }
 }

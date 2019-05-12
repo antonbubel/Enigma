@@ -44,5 +44,40 @@
                 }
             }
         }
+
+        public static class Identity
+        {
+            public static string JwtIssuer
+            {
+                get
+                {
+                    return IdentitySettings.Default.JwtIssuer;
+                }
+            }
+
+            public static string JwtIssuerAudience
+            {
+                get
+                {
+                    return IdentitySettings.Default.JwtIssuerAudience;
+                }
+            }
+
+            public static string SecretKey
+            {
+                get
+                {
+                    return IdentitySettings.Default.SecretKey;
+                }
+            }
+
+            public static int PasswordRequiredLength
+            {
+                get
+                {
+                    return IdentitySettings.Default.PasswordRequiredLength;
+                }
+            }
+        }
     }
 }

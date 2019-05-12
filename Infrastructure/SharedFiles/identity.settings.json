@@ -1,0 +1,6 @@
+{
+  "jwt-issuer": "webApi",
+  "jwt-issuer-audience": "http://localhost:50085/",
+  "secret-key": "iNivDmHLpUA223sqsfhqGbMRdRj1PVkH",
+  "password-required-length": 6
+}

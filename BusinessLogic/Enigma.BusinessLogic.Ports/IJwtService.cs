@@ -2,8 +2,10 @@
 {
     using System.Threading.Tasks;
 
+    using Models;
+
     public interface IJwtService
     {
-        Task<string> GetJwtForCredentials(object credentials);
+        Task<string> GetJwtForCredentials(CredentialsModelBL credentials);
     }
 }

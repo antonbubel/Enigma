@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj" />
+    <ProjectReference Include="..\Enigma.BusinessLogic.Models\Enigma.BusinessLogic.Models.csproj" />
+    <ProjectReference Include="..\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj" />
+  </ItemGroup>
+
 </Project>

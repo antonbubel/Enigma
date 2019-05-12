@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles"
 		Infrastructure\SharedFiles\args.settings.json = Infrastructure\SharedFiles\args.settings.json
 		Infrastructure\SharedFiles\connectionstring.settings.json = Infrastructure\SharedFiles\connectionstring.settings.json
 		Infrastructure\SharedFiles\enigma-machine-configuration.settings.json = Infrastructure\SharedFiles\enigma-machine-configuration.settings.json
+		Infrastructure\SharedFiles\identity.settings.json = Infrastructure\SharedFiles\identity.settings.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Machine", "Machine", "{91248E80-3CA6-4026-AF3B-797DF144CB03}"
@@ -29,17 +30,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Machine.Integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{59D97058-22A7-498B-9205-F5B28A4926C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic", "BusinessLogic\Enigma.BusinessLogic\Enigma.BusinessLogic.csproj", "{A48083E0-B1D0-4CB5-B3E4-47A0FC936837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.BusinessLogic", "BusinessLogic\Enigma.BusinessLogic\Enigma.BusinessLogic.csproj", "{A48083E0-B1D0-4CB5-B3E4-47A0FC936837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Ports", "BusinessLogic\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj", "{7C7C287F-32D1-4727-85FF-19623D33965A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.BusinessLogic.Ports", "BusinessLogic\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj", "{7C7C287F-32D1-4727-85FF-19623D33965A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{87725CA3-E77B-47D5-82E7-2ABF21B2DFBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Domain.Model", "Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj", "{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Domain.Model", "Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj", "{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Identity", "BusinessLogic\Enigma.BusinessLogic.Identity\Enigma.BusinessLogic.Identity.csproj", "{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.BusinessLogic.Identity", "BusinessLogic\Enigma.BusinessLogic.Identity\Enigma.BusinessLogic.Identity.csproj", "{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Domain.Migrations", "Domain\Enigma.Domain.Migrations\Enigma.Domain.Migrations.csproj", "{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enigma.Domain.Migrations", "Domain\Enigma.Domain.Migrations\Enigma.Domain.Migrations.csproj", "{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Presentation.Models", "Presentation\Enigma.Presentation.Models\Enigma.Presentation.Models.csproj", "{7D91EE3C-BCDF-4406-96AA-27BBE494B405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Models", "BusinessLogic\Enigma.BusinessLogic.Models\Enigma.BusinessLogic.Models.csproj", "{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Presentation.Adapters", "Presentation\Enigma.Presentation.Adapters\Enigma.Presentation.Adapters.csproj", "{5DC86D86-117B-4741-A3A2-84FFBCF233A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +94,18 @@ Global
 		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D91EE3C-BCDF-4406-96AA-27BBE494B405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D91EE3C-BCDF-4406-96AA-27BBE494B405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D91EE3C-BCDF-4406-96AA-27BBE494B405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D91EE3C-BCDF-4406-96AA-27BBE494B405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +122,9 @@ Global
 		{40F09358-2FCF-4FC9-9606-65D8ACC58DB7} = {87725CA3-E77B-47D5-82E7-2ABF21B2DFBE}
 		{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5} = {59D97058-22A7-498B-9205-F5B28A4926C5}
 		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47} = {87725CA3-E77B-47D5-82E7-2ABF21B2DFBE}
+		{7D91EE3C-BCDF-4406-96AA-27BBE494B405} = {E5D87088-B404-44D3-A125-7614FD07F9A9}
+		{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B} = {59D97058-22A7-498B-9205-F5B28A4926C5}
+		{5DC86D86-117B-4741-A3A2-84FFBCF233A7} = {E5D87088-B404-44D3-A125-7614FD07F9A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67205F16-3DFE-42C3-9BD7-71F390D5BB28}

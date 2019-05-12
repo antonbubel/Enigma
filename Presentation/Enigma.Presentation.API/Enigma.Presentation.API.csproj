@@ -10,10 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.WindowsServices" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
     <PackageReference Include="NLog" Version="4.6.3" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.8.2" />
@@ -21,6 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic.Identity\Enigma.BusinessLogic.Identity.csproj" />
+    <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic.Models\Enigma.BusinessLogic.Models.csproj" />
     <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj" />
     <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic\Enigma.BusinessLogic.csproj" />
     <ProjectReference Include="..\..\Domain\Enigma.Domain.Migrations\Enigma.Domain.Migrations.csproj" />
@@ -29,6 +33,8 @@
     <ProjectReference Include="..\..\Infrastructure\Enigma.Infrastructure.Configuration\Enigma.Infrastructure.Configuration.csproj" />
     <ProjectReference Include="..\..\Machine\Enigma.Machine.Integration\Enigma.Machine.Integration.csproj" />
     <ProjectReference Include="..\..\Machine\Enigma.Machine\Enigma.Machine.csproj" />
+    <ProjectReference Include="..\Enigma.Presentation.Adapters\Enigma.Presentation.Adapters.csproj" />
+    <ProjectReference Include="..\Enigma.Presentation.Models\Enigma.Presentation.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
