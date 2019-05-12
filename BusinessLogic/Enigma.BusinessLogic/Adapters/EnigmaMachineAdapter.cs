@@ -21,8 +21,8 @@
             {
                 return letter;
             }
-            
-            var ecnryptedLetter = 
+
+            var ecnryptedLetter =
                 PressKey(char.ToUpperInvariant(letter));
 
             return char.IsLower(letter)

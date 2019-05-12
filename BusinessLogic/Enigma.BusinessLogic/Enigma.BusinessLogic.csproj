@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Machine\Enigma.Machine.Integration\Enigma.Machine.Integration.csproj" />
     <ProjectReference Include="..\..\Machine\Enigma.Machine\Enigma.Machine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UseCases\" />
   </ItemGroup>
 
 </Project>
