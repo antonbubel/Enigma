@@ -5,16 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Adapters\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic.Models\Enigma.BusinessLogic.Models.csproj" />
     <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj" />
+    <ProjectReference Include="..\..\Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Enigma.Infrastructure.Exceptions\Enigma.Infrastructure.Exceptions.csproj" />
     <ProjectReference Include="..\Enigma.Presentation.Models\Enigma.Presentation.Models.csproj" />
   </ItemGroup>
 

@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Models
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Presentation.Adapters", "Presentation\Enigma.Presentation.Adapters\Enigma.Presentation.Adapters.csproj", "{5DC86D86-117B-4741-A3A2-84FFBCF233A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Infrastructure.Exceptions", "Infrastructure\Enigma.Infrastructure.Exceptions\Enigma.Infrastructure.Exceptions.csproj", "{2C192123-2BCD-4251-8DB3-2AC3D07D00FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,10 @@ Global
 		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DC86D86-117B-4741-A3A2-84FFBCF233A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C192123-2BCD-4251-8DB3-2AC3D07D00FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C192123-2BCD-4251-8DB3-2AC3D07D00FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C192123-2BCD-4251-8DB3-2AC3D07D00FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C192123-2BCD-4251-8DB3-2AC3D07D00FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +131,7 @@ Global
 		{7D91EE3C-BCDF-4406-96AA-27BBE494B405} = {E5D87088-B404-44D3-A125-7614FD07F9A9}
 		{AC7E7093-A4E7-4CEB-9992-E15EF7FD748B} = {59D97058-22A7-498B-9205-F5B28A4926C5}
 		{5DC86D86-117B-4741-A3A2-84FFBCF233A7} = {E5D87088-B404-44D3-A125-7614FD07F9A9}
+		{2C192123-2BCD-4251-8DB3-2AC3D07D00FF} = {95B3064E-E39A-48B4-A473-A6887417214A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67205F16-3DFE-42C3-9BD7-71F390D5BB28}

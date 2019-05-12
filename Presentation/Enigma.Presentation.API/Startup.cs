@@ -25,6 +25,7 @@
     using Infrastructure.Configuration;
 
     using BusinessLogic.Ports;
+    using BusinessLogic.UseCases;
     using BusinessLogic.Models;
     using BusinessLogic.Identity;
     using static BusinessLogic.Identity.Helpers.Constants;
@@ -43,6 +44,10 @@
                .BuildServiceProvider();
 
             services.AddScoped<IEnigmaMachine, EnigmaMachine>();
+            services.AddScoped<IAccountsPort, AccountsUseCase>();
+            services.AddScoped<IJwtService, JwtService>();
+            services.AddScoped<IAccountsAdapter, AccountsAdapter>();
+            services.AddScoped<IAuthAdapter, AuthAdapter>();
 
             services.AddSingleton(ctx => MapperConfigurationProvider.CreateConfiguration().CreateMapper());
             services.AddSingleton<IJwtFactory, JwtFactory>();

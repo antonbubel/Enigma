@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj" />
     <ProjectReference Include="..\..\Machine\Enigma.Machine\Enigma.Machine.csproj" />
+    <ProjectReference Include="..\Enigma.BusinessLogic.Models\Enigma.BusinessLogic.Models.csproj" />
+    <ProjectReference Include="..\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
