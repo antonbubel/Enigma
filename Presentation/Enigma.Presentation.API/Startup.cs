@@ -11,7 +11,6 @@
     using Hubs;
 
     using Machine;
-    using Machine.Facade;
 
     public class Startup
     {

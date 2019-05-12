@@ -1,7 +1,5 @@
 ﻿namespace Enigma.Machine
 {
-    using Facade;
-
     using Integration;
     using Integration.Enums;
     using Integration.Models;

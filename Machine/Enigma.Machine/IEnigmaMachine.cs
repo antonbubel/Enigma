@@ -1,4 +1,4 @@
-﻿namespace Enigma.Machine.Facade
+﻿namespace Enigma.Machine
 {
     using Integration.Enums;
     using Integration.Models;

@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Enigma.Machine.Facade\Enigma.Machine.Facade.csproj" />
     <ProjectReference Include="..\Enigma.Machine.Models\Enigma.Machine.Integration.csproj" />
   </ItemGroup>
 

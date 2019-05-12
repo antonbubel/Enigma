@@ -20,7 +20,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Enigma.Infrastructure.Common\Enigma.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Enigma.Infrastructure.Configuration\Enigma.Infrastructure.Configuration.csproj" />
-    <ProjectReference Include="..\..\Machine\Enigma.Machine.Facade\Enigma.Machine.Facade.csproj" />
     <ProjectReference Include="..\..\Machine\Enigma.Machine.Models\Enigma.Machine.Integration.csproj" />
     <ProjectReference Include="..\..\Machine\Enigma.Machine\Enigma.Machine.csproj" />
   </ItemGroup>
