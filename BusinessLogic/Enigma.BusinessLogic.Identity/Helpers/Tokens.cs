@@ -10,7 +10,7 @@
     using Ports;
     using static Constants;
 
-    public class Tokens
+    public static class Tokens
     {
         public static async Task<string> GenerateJwt(
             ClaimsIdentity identity, IJwtFactory jwtFactory, string userName, 
