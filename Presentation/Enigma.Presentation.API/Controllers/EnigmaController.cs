@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Enigma.Presentation.API.Controllers
 {
-    using Machine.Facade;
+    using Machine;
 
     [Route("api/[controller]")]
     [ApiController]

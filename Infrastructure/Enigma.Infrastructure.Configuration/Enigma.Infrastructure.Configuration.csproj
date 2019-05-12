@@ -11,6 +11,9 @@
     <Content Include="..\SharedFiles\args.settings.json" Link="args.settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\SharedFiles\connectionstring.settings.json" Link="connectionstring.settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

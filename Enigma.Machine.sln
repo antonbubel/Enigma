@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles"
 	ProjectSection(SolutionItems) = preProject
 		Infrastructure\SharedFiles\appstart.settings.json = Infrastructure\SharedFiles\appstart.settings.json
 		Infrastructure\SharedFiles\args.settings.json = Infrastructure\SharedFiles\args.settings.json
+		Infrastructure\SharedFiles\connectionstring.settings.json = Infrastructure\SharedFiles\connectionstring.settings.json
 		Infrastructure\SharedFiles\enigma-machine-configuration.settings.json = Infrastructure\SharedFiles\enigma-machine-configuration.settings.json
 	EndProjectSection
 EndProject
@@ -33,6 +34,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Services", "BusinessLogic\Enigma.BusinessLogic.Services\Enigma.BusinessLogic.Services.csproj", "{A48083E0-B1D0-4CB5-B3E4-47A0FC936837}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Services.Facade", "BusinessLogic\Enigma.BusinessLogic.Services.Facade\Enigma.BusinessLogic.Services.Facade.csproj", "{7C7C287F-32D1-4727-85FF-19623D33965A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{87725CA3-E77B-47D5-82E7-2ABF21B2DFBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Domain.Model", "Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj", "{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.BusinessLogic.Auth", "BusinessLogic\Enigma.BusinessLogic.Auth\Enigma.BusinessLogic.Auth.csproj", "{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Domain.Migrations", "Domain\Enigma.Domain.Migrations\Enigma.Domain.Migrations.csproj", "{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +81,18 @@ Global
 		{7C7C287F-32D1-4727-85FF-19623D33965A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C7C287F-32D1-4727-85FF-19623D33965A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C7C287F-32D1-4727-85FF-19623D33965A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40F09358-2FCF-4FC9-9606-65D8ACC58DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +107,9 @@ Global
 		{95D28845-5BF8-43B2-9203-6DFC5D5C02D6} = {59D97058-22A7-498B-9205-F5B28A4926C5}
 		{A48083E0-B1D0-4CB5-B3E4-47A0FC936837} = {59D97058-22A7-498B-9205-F5B28A4926C5}
 		{7C7C287F-32D1-4727-85FF-19623D33965A} = {59D97058-22A7-498B-9205-F5B28A4926C5}
+		{40F09358-2FCF-4FC9-9606-65D8ACC58DB7} = {87725CA3-E77B-47D5-82E7-2ABF21B2DFBE}
+		{DC848DA5-319D-4226-A7DA-7CD19FC7A5E5} = {59D97058-22A7-498B-9205-F5B28A4926C5}
+		{3FC11CF8-39D2-4CF7-9458-4C4DD2E83B47} = {87725CA3-E77B-47D5-82E7-2ABF21B2DFBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67205F16-3DFE-42C3-9BD7-71F390D5BB28}

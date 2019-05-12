@@ -28,5 +28,13 @@ namespace Enigma.Infrastructure.Configuration.Properties
                 return sections["nlog-configuration-file"].Value;
             }
         }
+
+        public string MigrationsAssembly
+        {
+            get
+            {
+                return sections["migrations-assembly"].Value;
+            }
+        }
     }
 }

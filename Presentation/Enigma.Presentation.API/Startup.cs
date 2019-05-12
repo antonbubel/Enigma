@@ -2,15 +2,21 @@
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
-    using Microsoft.Extensions.DependencyInjection;
-
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.SignalR;
     using Microsoft.AspNetCore.Cors.Infrastructure;
 
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.DependencyInjection;
+
     using Hubs;
 
     using Machine;
+
+    using Infrastructure.Configuration;
+
+    using Domain.Model;
+    
 
     public class Startup
     {
@@ -18,6 +24,10 @@
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddEntityFrameworkNpgsql()
+               .AddDbContext<ApplicationContext>(ConfigurePostgreSqlDatabase)
+               .BuildServiceProvider();
+
             services.AddScoped<IEnigmaMachine, EnigmaMachine>();
             
             services.AddCors();
@@ -40,6 +50,14 @@
             app.UseCors(ConfigureCorsPolicy);
             app.UseSignalR(ConfigureHubRouteBuilder);
             app.UseMvc();
+        }
+
+        private void ConfigurePostgreSqlDatabase(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql(
+                ConfigurationManager.ConnectionStrings.DefaultContext,
+                serverOptions => serverOptions.MigrationsAssembly(ConfigurationManager.AppStart.MigrationsAssembly)
+            );
         }
 
         private void ConfigureCorsPolicy(CorsPolicyBuilder corsPolicyBuilder)

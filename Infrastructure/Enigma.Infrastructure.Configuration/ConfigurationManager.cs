@@ -13,6 +13,14 @@
                     return AppStartSettings.Default.NLogConfigurationFile;
                 }
             }
+
+            public static string MigrationsAssembly
+            {
+                get
+                {
+                    return AppStartSettings.Default.MigrationsAssembly;
+                }
+            }
         }
 
         public static class Args
@@ -22,6 +30,17 @@
                 get
                 {
                     return ArgsSettings.Default.RunAsConsoleArgument;
+                }
+            }
+        }
+
+        public static class ConnectionStrings
+        {
+            public static string DefaultContext
+            {
+                get
+                {
+                    return ConnectionStringSettings.Default.DefaultContext;
                 }
             }
         }
