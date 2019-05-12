@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Enigma.Machine.Models\Enigma.Machine.Integration.csproj" />
+    <ProjectReference Include="..\Enigma.Machine.Integration\Enigma.Machine.Integration.csproj" />
   </ItemGroup>
 
 </Project>
