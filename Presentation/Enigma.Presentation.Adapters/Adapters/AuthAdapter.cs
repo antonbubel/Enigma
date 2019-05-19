@@ -15,11 +15,11 @@
 
     public class AuthAdapter : IAuthAdapter
     {
-        private readonly ILogger logger;
+        private readonly ILogger<IAuthAdapter> logger;
         private readonly IMapper mapper;
         private readonly IJwtService jwtService;
 
-        public AuthAdapter(ILogger logger, IMapper mapper, IJwtService jwtService)
+        public AuthAdapter(ILogger<IAuthAdapter> logger, IMapper mapper, IJwtService jwtService)
         {
             this.logger = logger;
             this.mapper = mapper;

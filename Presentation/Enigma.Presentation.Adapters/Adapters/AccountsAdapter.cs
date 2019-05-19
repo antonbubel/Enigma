@@ -14,11 +14,11 @@
 
     public class AccountsAdapter : IAccountsAdapter
     {
-        private readonly ILogger logger;
+        private readonly ILogger<IAccountsAdapter> logger;
         private readonly IMapper mapper;
         private readonly IAccountsPort accountsPort;
 
-        public AccountsAdapter(ILogger logger, IMapper mapper, IAccountsPort accountsPort)
+        public AccountsAdapter(ILogger<IAccountsAdapter> logger, IMapper mapper, IAccountsPort accountsPort)
         {
             this.logger = logger;
             this.mapper = mapper;

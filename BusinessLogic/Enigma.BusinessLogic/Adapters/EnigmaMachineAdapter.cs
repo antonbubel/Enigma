@@ -26,8 +26,8 @@
                 PressKey(char.ToUpperInvariant(letter));
 
             return char.IsLower(letter)
-                ? char.ToLowerInvariant(letter)
-                : letter;
+                ? char.ToLowerInvariant(ecnryptedLetter)
+                : ecnryptedLetter;
         }
     }
 }

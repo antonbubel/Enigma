@@ -1,27 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-
-namespace Enigma.Presentation.API.Controllers
+﻿namespace Enigma.Presentation.API.Controllers
 {
-    using Machine;
+    using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Authorization;
+
+    using Adapters;
+    using Models;
 
     [Route("api/[controller]")]
     [ApiController]
-    public class EnigmaController : ControllerBase
+    [Authorize(Policy = "ApiUser")]
+    public class EnigmaController : AuthorizedControllerBase
     {
-        private readonly IEnigmaMachine enigmaMachine;
+        private readonly IEnigmaMachineAdapter enigmaMachineAdapter;
 
-        public EnigmaController(IEnigmaMachine enigmaMachine)
+        public EnigmaController(IEnigmaMachineAdapter enigmaMachineAdapter)
         {
-            this.enigmaMachine = enigmaMachine;
+            this.enigmaMachineAdapter = enigmaMachineAdapter;
         }
 
-        [HttpGet("{value}")]
-        public IActionResult Get(string value)
+        [HttpPost("encrypt")]
+        public async Task<IActionResult> Encrypt([FromBody]RequestMessageModel model)
         {
-            var response = new string(value.ToUpper().ToCharArray().Select(enigmaMachine.PressKey).ToArray());
+            var message = 
+                await enigmaMachineAdapter.Encrypt(UserId, model.Message);
 
-            return Ok(new { YOUGOTMAIL = response });
+            return Ok(message);
         }
     }
 }

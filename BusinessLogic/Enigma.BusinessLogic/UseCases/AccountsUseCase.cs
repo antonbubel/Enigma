@@ -1,15 +1,15 @@
 ﻿namespace Enigma.BusinessLogic.UseCases
 {
-    using AutoMapper;
+        using AutoMapper;
 
-    using System.Threading.Tasks;
+        using System.Threading.Tasks;
 
-    using Microsoft.AspNetCore.Identity;
+        using Microsoft.AspNetCore.Identity;
 
-    using Models;
-    using Ports;
+        using Models;
+        using Ports;
 
-    using Domain.Model.Entities;
+        using Domain.Model.Entities;
 
     public class AccountsUseCase : IAccountsPort
     {
@@ -26,7 +26,7 @@
         {
             var userIdentity = mapper.Map<ApplicationUser>(credentials);
             var identityResult = await userManager.CreateAsync(userIdentity, credentials.Password);
-
+            
             return identityResult;
         }
     }

@@ -42,12 +42,18 @@
             services.AddEntityFrameworkNpgsql()
                .AddDbContext<ApplicationContext>(ConfigurePostgreSqlDatabase)
                .BuildServiceProvider();
-
+            
             services.AddScoped<IEnigmaMachine, EnigmaMachine>();
             services.AddScoped<IAccountsPort, AccountsUseCase>();
+            services.AddScoped<IEnigmaMachinePort, EnigmaMachineUseCase>();
+            services.AddScoped<IEnigmaMachineConfigurationPort, EnigmaMachineConfigurationUseCase>();
+            services.AddScoped(typeof(BusinessLogic.Adapters.EnigmaMachineAdapter));
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IAccountsAdapter, AccountsAdapter>();
             services.AddScoped<IAuthAdapter, AuthAdapter>();
+            services.AddScoped<IEnigmaMachineAdapter, EnigmaMachineAdapter>();
+            services.AddScoped<IEnigmaMachineConfigurationAdapter, EnigmaMachineConfigurationAdapter>();
+            services.AddLogging();
 
             services.AddSingleton(ctx => MapperConfigurationProvider.CreateConfiguration().CreateMapper());
             services.AddSingleton<IJwtFactory, JwtFactory>();

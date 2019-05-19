@@ -3,15 +3,17 @@ using System;
 using Enigma.Domain.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Enigma.Domain.Migrations.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20190518181753_CreateEnigmaConfigurationsTable")]
+    partial class CreateEnigmaConfigurationsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,26 +93,6 @@ namespace Enigma.Domain.Migrations.Migrations
                     b.HasIndex("ApplicationUserId");
 
                     b.ToTable("EnigmaConfigurations");
-                });
-
-            modelBuilder.Entity("Enigma.Domain.Model.Entities.RotorsConfiguration", b =>
-                {
-                    b.Property<long>("RotorsConfigurationId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ApplicationUserId");
-
-                    b.Property<char>("FirstLetter");
-
-                    b.Property<char>("SecondLetter");
-
-                    b.Property<char>("ThirdLetter");
-
-                    b.HasKey("RotorsConfigurationId");
-
-                    b.HasIndex("ApplicationUserId");
-
-                    b.ToTable("RotorsConfigurations");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -221,13 +203,6 @@ namespace Enigma.Domain.Migrations.Migrations
                 });
 
             modelBuilder.Entity("Enigma.Domain.Model.Entities.EnigmaConfiguration", b =>
-                {
-                    b.HasOne("Enigma.Domain.Model.Entities.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("ApplicationUserId");
-                });
-
-            modelBuilder.Entity("Enigma.Domain.Model.Entities.RotorsConfiguration", b =>
                 {
                     b.HasOne("Enigma.Domain.Model.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany()

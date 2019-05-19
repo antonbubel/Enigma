@@ -13,6 +13,7 @@
     <ProjectReference Include="..\..\BusinessLogic\Enigma.BusinessLogic.Ports\Enigma.BusinessLogic.Ports.csproj" />
     <ProjectReference Include="..\..\Domain\Enigma.Domain.Model\Enigma.Domain.Model.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Enigma.Infrastructure.Exceptions\Enigma.Infrastructure.Exceptions.csproj" />
+    <ProjectReference Include="..\..\Machine\Enigma.Machine.Integration\Enigma.Machine.Integration.csproj" />
     <ProjectReference Include="..\Enigma.Presentation.Models\Enigma.Presentation.Models.csproj" />
   </ItemGroup>
 
